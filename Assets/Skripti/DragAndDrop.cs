@@ -8,7 +8,7 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
 	private CanvasGroup kanvasGrupa;
 	private RectTransform velkObjRectTransf;
 
-	public Object objektuSkripts;
+	public objektuSkripts objektuSkripts;
 
 	// Use this for initialization
 	void Start () {
@@ -30,6 +30,12 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
 	}
 	public void OnEndDrag(PointerEventData darbiba){
 		Debug.Log ("Beigta objekta vilkšana");
-
+		kanvasGrupa.alpha = 1f;
+		if (objektuSkripts.vaiIstajaVieta == false) {
+			kanvasGrupa.blocksRaycasts = true;
+		} else {
+			objektuSkripts.pedejaisVilktais = null;
+		}
+		objektuSkripts.vaiIstajaVieta = false;
 	}
 }
