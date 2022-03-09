@@ -14,7 +14,7 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 	public void OnDrop(PointerEventData notikums){
 	
 		if (notikums.pointerDrag != null) {
-			if (notikums.pointerDrag.tag.Equals(tag)) {
+			if (notikums.pointerDrag.tag.Equals (tag)) {
 				vietasZrot = notikums.pointerDrag.GetComponent<RectTransform> ().eulerAngles.z;
 				velkObjZrot = GetComponent<RectTransform> ().eulerAngles.z;
 				rotStarp = Mathf.Abs (vietasZrot - velkObjZrot);
@@ -32,7 +32,7 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 
 					notikums.pointerDrag.GetComponent<RectTransform> ().localScale = GetComponent<RectTransform> ().localScale;
 
-					switch(notikums.pointerDrag.tag){
+					switch (notikums.pointerDrag.tag) {
 					case "Atkritumi":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skana [1]);
 						break;
@@ -40,13 +40,32 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skana [2]);
 						break;
 					case "Autobuss":
-						objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skana[3]);
-							break;
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skana [3]);
+						break;
 					default:
 						Debug.Log ("Nederīgs Tags");
 						break;
 					}
 				}
+			} else {
+				objektuSkripts.vaiIstajaVieta = false;
+				objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skana[0]);
+
+				switch(notikums.pointerDrag.tag){
+				case "Atkritumi":
+					objektuSkripts.Atkritumi.GetComponent<RectTransform> ().localPosition = objektuSkripts.atkrKord;
+					break;
+				case "Ambulance":
+					objektuSkripts.Ambulance.GetComponent<RectTransform> ().localPosition = objektuSkripts.ambKord;
+					break;
+				case "Autobuss":
+					objektuSkripts.Autobuss.GetComponent<RectTransform> ().localPosition = objektuSkripts.autKord;
+					break;
+				default:
+					Debug.Log ("Nederīgs Tags");
+					break;
+				}
+
 			}
 		}
 	}
