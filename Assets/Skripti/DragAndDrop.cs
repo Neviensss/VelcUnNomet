@@ -23,6 +23,7 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
 		Debug.Log ("Uzsākta objekta vilkšana");
 		kanvasGrupa.alpha = 0.6f;
 		kanvasGrupa.blocksRaycasts = false;
+		objektuSkripts.pedejaisVilktais = null;
 	}
 	public void OnDrag(PointerEventData darbiba){
 		Debug.Log ("Notiek objekta vilkšana");
@@ -31,6 +32,8 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
 	public void OnEndDrag(PointerEventData darbiba){
 		Debug.Log ("Beigta objekta vilkšana");
 		kanvasGrupa.alpha = 1f;
+		objektuSkripts.pedejaisVilktais = darbiba.pointerDrag;
+
 		if (objektuSkripts.vaiIstajaVieta == false) {
 			kanvasGrupa.blocksRaycasts = true;
 		} else {

@@ -29,8 +29,4 @@ public class objektuSkripts : MonoBehaviour {
 		ambKord = Ambulance.GetComponent<RectTransform> ().localPosition;
 		autKord = Autobuss.GetComponent<RectTransform> ().localPosition;
 	}
-
-	void Update(){
-		
-	}
 }
