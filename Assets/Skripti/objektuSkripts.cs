@@ -25,6 +25,12 @@ public class objektuSkripts : MonoBehaviour {
 	public GameObject pedejaisVilktais = null;
 
 	void Start(){
+		atkrKord = Atkritumi.GetComponent<RectTransform> ().localPosition;
+		ambKord = Ambulance.GetComponent<RectTransform> ().localPosition;
+		autKord = Autobuss.GetComponent<RectTransform> ().localPosition;
+	}
 
+	void Update(){
+		
 	}
 }
