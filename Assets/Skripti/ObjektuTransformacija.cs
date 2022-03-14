@@ -38,7 +38,7 @@ public class ObjektuTransformacija : MonoBehaviour {
 				}
 			}
 			if(Input.GetKey (KeyCode.LeftArrow)){
-				if (objektuSkriptss.pedejaisVilktais.GetComponent<RectTransform> ().localScale.y >= 0.3f) {
+				if (objektuSkriptss.pedejaisVilktais.GetComponent<RectTransform> ().localScale.y >= 0.4f) {
 					objektuSkriptss.pedejaisVilktais.GetComponent<RectTransform> ().localScale 
 					= new Vector2 (objektuSkriptss.pedejaisVilktais.GetComponent<RectTransform> ().localScale.x - 0.001f,
 						objektuSkriptss.pedejaisVilktais.GetComponent<RectTransform> ().localScale.y);
