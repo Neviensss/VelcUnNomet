@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class NomesanasVieta : MonoBehaviour, IDropHandler {
 
@@ -35,30 +36,45 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 					switch (notikums.pointerDrag.tag) {
 					case "Atkritumi":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skana [1]);
+						objektuSkripts.punkti++;
 						break;
 					case "Ambulance":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skana [2]);
+						objektuSkripts.punkti++;
 						break;
 					case "Autobuss":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skana [3]);
+						objektuSkripts.punkti++;
 						break;
 					case "b2":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skana [4]);
+						objektuSkripts.punkti++;
 						break;
-					case "Cements":
+					case "cements":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skana [5]);
+						objektuSkripts.punkti++;
 						break;
-					case "Policija":
+					case "e46":
+						objektuSkripts.punkti++;
+						break;
+					case "ekskavators":
+						objektuSkripts.punkti++;
+						break;
+					case "policija":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skana [6]);
+						objektuSkripts.punkti++;
 						break;
 					case "traktorsDzeltens":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skana [7]);
+						objektuSkripts.punkti++;
 						break;
 					case "traktorsZals":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skana [8]);
+						objektuSkripts.punkti++;
 						break;
-					case "UgunsDzesejs":
+					case "Ugunsdzesejs":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skana [9]);
+						objektuSkripts.punkti++;
 						break;
 
 					default:
@@ -83,7 +99,7 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 				case "b2":
 					objektuSkripts.b2.GetComponent<RectTransform> ().localPosition = objektuSkripts.b2Kord;
 					break;
-				case "Cements":
+				case "cements":
 					objektuSkripts.Cements.GetComponent<RectTransform> ().localPosition = objektuSkripts.cemKord;
 					break;
 				case "e46":
@@ -92,7 +108,7 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 				case "Ekskavators":
 					objektuSkripts.ekskavators.GetComponent<RectTransform> ().localPosition = objektuSkripts.eksKord;
 					break;
-				case "Policija":
+				case "policija":
 					objektuSkripts.Policija.GetComponent<RectTransform> ().localPosition = objektuSkripts.polKord;
 					break;
 				case "traktorsDzeltens":
@@ -101,7 +117,7 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 				case "traktorsZals":
 					objektuSkripts.TraktorsZals.GetComponent<RectTransform> ().localPosition = objektuSkripts.traktZKord;
 					break;
-				case "UgunsDzesejs":
+				case "Ugunsdzesejs":
 					objektuSkripts.Ugunsdzesejs.GetComponent<RectTransform> ().localPosition = objektuSkripts.UgunsKord;
 					break;
 				default:
@@ -112,4 +128,18 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 			}
 		}
 	}
+
+	public void NoteiktZvaigznes(){
+		if (objektuSkripts.punkti == 11) {
+			objektuSkripts.Uzvara.SetActive (true);
+
+			if(objektuSkripts.taimeris <= 90f){
+
+			}else if(objektuSkripts.taimeris <= 120f){
+
+			}else if(objektuSkripts.taimeris <= 150f){
+			
+			}
+		}
+}
 }

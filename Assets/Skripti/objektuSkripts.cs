@@ -16,6 +16,11 @@ public class objektuSkripts : MonoBehaviour {
 	public GameObject TraktorsDzeltens;
 	public GameObject TraktorsZals;
 	public GameObject Ugunsdzesejs;
+	public int punkti = 0;
+	public float taimeris;
+	public bool startetsTaimeris = false;
+	public GameObject Uzvara;
+	public GameObject Pauze;
 
 
 	[HideInInspector]
@@ -61,5 +66,8 @@ public class objektuSkripts : MonoBehaviour {
 		traktDzKord = TraktorsDzeltens.GetComponent<RectTransform> ().localPosition;
 		traktZKord = TraktorsZals.GetComponent<RectTransform> ().localPosition;
 		UgunsKord = Ugunsdzesejs.GetComponent<RectTransform> ().localPosition;
+		startetsTaimeris = true;
+		Uzvara.SetActive (false);
 	}
+
 }
