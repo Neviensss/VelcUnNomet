@@ -8,7 +8,27 @@ public class MainitScenas : MonoBehaviour {
 	public objektuSkripts objektuSkripts;
 	public void UzSpeli(){
 		SceneManager.LoadScene ("Sakums", LoadSceneMode.Single);
-		objektuSkripts.startetsTaimeris = true;
 	}
-		
+
+	public void Restart()
+    {
+		SceneManager.LoadScene("Sakums", LoadSceneMode.Single);
+	}
+
+	void Update()
+	{
+		if (Input.GetKey(KeyCode.Escape))
+		{
+			Application.Quit();
+		}
+	}
+	void PauseGame()
+	{
+		Time.timeScale = 0;
+	}
+	void ResumeGame()
+	{
+		Time.timeScale = 1;
+	}
+
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class objektuSkripts : MonoBehaviour {
 
@@ -20,8 +21,11 @@ public class objektuSkripts : MonoBehaviour {
 	public float taimeris;
 	public bool startetsTaimeris = false;
 	public GameObject Uzvara;
-	public GameObject Pauze;
-
+	public GameObject Restarts;
+	public GameObject Zvaigzne1;
+	public GameObject Zvaigzne2;
+	public GameObject Zvaigzne3;
+	public Text laikaIzvade;
 
 	[HideInInspector]
 	public Vector2 atkrKord;
@@ -67,7 +71,12 @@ public class objektuSkripts : MonoBehaviour {
 		traktZKord = TraktorsZals.GetComponent<RectTransform> ().localPosition;
 		UgunsKord = Ugunsdzesejs.GetComponent<RectTransform> ().localPosition;
 		startetsTaimeris = true;
+		laikaIzvade.GetComponent<Text>().enabled = false;
 		Uzvara.SetActive (false);
+		Zvaigzne1.SetActive(false);
+		Zvaigzne2.SetActive(false);
+		Zvaigzne3.SetActive(false);
+		Restarts.SetActive(false);
 	}
 
 }

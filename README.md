@@ -5,7 +5,7 @@ Unity 2D projekts
 - [x] Spēles ainas izkārtošana
 - [x] Objektu vilkšanas nodrošināšana
 - [x] Objektu novietošanas (pareizi/nepareizi) nodrošinašana
-- [ ] Objektu rotācijas iespēju integrēšana
-- [ ] Objektu izmēra maiņas iespēju integrēšanas
-- [ ] Laika atskaites integrēšana
-- [ ] Punktu sistēmas ieviešana
+- [x] Objektu rotācijas iespēju integrēšana
+- [x] Objektu izmēra maiņas iespēju integrēšanas
+- [x] Laika atskaites integrēšana
+- [x] Punktu sistēmas ieviešana
