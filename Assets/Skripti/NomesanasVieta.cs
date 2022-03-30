@@ -136,7 +136,7 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 		}
 
 
-				if (objektuSkripts.punkti == 3)
+				if (objektuSkripts.punkti == 11)
 				{
 					objektuSkripts.Uzvara.SetActive(true);
 					objektuSkripts.Restarts.SetActive(true);
@@ -145,18 +145,18 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 					objektuSkripts.laikaIzvade.GetComponent<Text>().enabled = true;
 					objektuSkripts.laikaIzvade.text = "Tu izgāji spēli " + Mathf.Round(objektuSkripts.taimeris).ToString() + " sekundēs!";
 
-					if (objektuSkripts.taimeris < 5f)
+					if (objektuSkripts.taimeris < 90f)
 					{
 						objektuSkripts.Zvaigzne1.SetActive(true);
 						objektuSkripts.Zvaigzne2.SetActive(true);
 						objektuSkripts.Zvaigzne3.SetActive(true);
 					}
-					else if (objektuSkripts.taimeris >= 10f)
+					else if (objektuSkripts.taimeris >= 100f)
 					{
 						objektuSkripts.Zvaigzne1.SetActive(true);
 						objektuSkripts.Zvaigzne2.SetActive(true);
 					}
-					else if (objektuSkripts.taimeris >= 15f)
+					else if (objektuSkripts.taimeris >= 120f)
 					{
 						objektuSkripts.Zvaigzne1.SetActive(true);
 					}

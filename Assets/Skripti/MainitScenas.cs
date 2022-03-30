@@ -15,13 +15,12 @@ public class MainitScenas : MonoBehaviour {
 		SceneManager.LoadScene("Sakums", LoadSceneMode.Single);
 	}
 
-	void Update()
-	{
-		if (Input.GetKey(KeyCode.Escape))
-		{
-			Application.Quit();
+		public void iziet() {
+			if (Input.GetKey(KeyCode.Escape))
+			{
+				Application.Quit();
+			}
 		}
-	}
 	void PauseGame()
 	{
 		Time.timeScale = 0;
